@@ -18,7 +18,7 @@ video {
 }
 
 .reel-page {
-	height: 100vh; /* ti incuriosisce? */
+	height: 100vh; 
 	max-width: 512px;
 	min-width: 400px;
 	position: relative;
@@ -34,12 +34,29 @@ video {
 	justify-content: space-between;
 	color: white;
 	padding: 0 15px;
+	min-height: 50px;
 }
 
 .top-bar {
 	color: gray;
 	display: flex;
 	gap: 15px;
+}
+
+.notification {
+	position: relative;
+}
+
+.notification::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 8px;
+	height: 8px;
+	background-color: red;
+	border-radius: 50%;
+	transform: translate(100%, -50%)
 }
 
 .per-te {
@@ -68,7 +85,6 @@ footer {
 	flex-direction: column;
 }
 
-/* Sidebar */
 .sidebar {
 	padding: 0 16px;
 	position: absolute;
@@ -78,7 +94,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 30px;
+	gap: 25px;
 }
 
 .sidebar img {
@@ -117,31 +133,69 @@ footer {
 	font-size: small;
 }
 
-
-
-
-
-
-
-
-/* ---------------------
-Regole per evidenziare i blocchi 
-da rimuovere una volta concluso
---------------------- */
-.debug footer {
-	min-height: 100px;
-	border: 2px dashed #fff;
+.info {
+	padding: 15px;
 }
 
-.debug .sidebar {
-	min-width: 80px;
-	min-height: 450px;
-	border: 2px dashed #ff0;
+footer div{
+	flex-basis: 50%;
 }
 
-.debug .reel-header {
-	min-height: 50px;
-	border: 2px dashed #fff;
+footer h3 {
+	font-size: medium;
+	margin-bottom: 5px;
 }
 
-/* --------------------- */
+footer p {
+	font-size: small;
+}
+
+.footer-bar {
+	background-color: black;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.footer-elements {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: gray;
+	font-size: small;
+}
+
+.home {
+	color: white;
+}
+
+.plus-button {
+	background-color: white;
+	padding: 0 10px;
+	color: black;
+	border-radius: 5px;
+	border-left: 2px solid rgb(99, 186, 215);
+	border-right: 2px solid rgb(235, 45, 235);
+	font-size: 20px;
+}
+
+.chat-container {
+	position: relative;
+}
+
+.chat {
+	position: absolute;
+	top: 0;
+	right: -55%;
+	background-color: red;
+	border-radius: 100%;
+	color: white;
+	font-size: smaller;
+	padding: 0 3px;
+}
+
+.footer-bar i {
+	font-size: 22px;
+}
